@@ -1,0 +1,42 @@
+fruit = tuple("mango")
+>>> print(len(fruit))
+5
+>>> tuple=(45,98,56,95,34,76,23)
+>>> print(max(tuple))
+98
+>>> print(min(tuple))
+23
+>>> a=" i m a girl "
+>>> b=10
+>>> a*b
+' i m a girl  i m a girl  i m a girl  i m a girl  i m a girl  i m a girl  i m a girl  i m a girl  i m a girl  i m a girl '
+>>> fruit = set(["mango","banana","grapes","apple"])
+>>> print(fruit)
+{'mango', 'banana', 'apple', 'grapes'}
+>>> students = {"name" : 'appi', "class" : 10}
+>>> print(dict)
+<class 'dict'>
+>>> print(students)
+{'name': 'appi', 'class': 10}
+>>> import operator
+>>> d = {1:3, 4:3, 3:4, 0:0, 2:5}
+>>> print('dictionary:',d)
+dictionary: {0: 0, 1: 3, 2: 5, 3: 4, 4: 3}
+>>> sorted_d = sorted(d.items(), key=operator.itemgetter(0))
+>>> print('dictionary in sorted form:',sorted_d)
+dictionary in sorted form: [(0, 0), (1, 3), (2, 5), (3, 4), (4, 3)]
+>>> def count_dict(mystring):
+...     d = {}
+...     for w in mystring:
+...         d[w] = mystring.count(w)
+...     for k in sorted(d):
+...         print ( k + ': ' + str(d[k]))
+...
+>>> mystring='aabbaaddaahhaakk'
+>>> count_dict(mystring)
+a: 8
+b: 2
+d: 2
+h: 2
+k: 2
+>>>
