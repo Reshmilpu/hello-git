@@ -1,0 +1,72 @@
+Qstn No.1:  year=int(input("enter year to be check whether leap year or not:"))
+enter year to be check whether leap year or not:2016
+>>> if(year%4==0 and year%100!=0 or year%400==0):
+...      print("the year is a leap year!")
+... else:
+...      print("the year is not a leap year!")
+...
+the year is a leap year!
+>>>
+>>>
+>>>
+>>>Qstn No.2: length=float(input("enter length :"))
+enter length :40
+>>> breadth=float(input("enter breadth :"))
+enter breadth :50
+>>> area_of_square=length*length
+>>> area_of_rectangle=length*breadth
+>>> if(length==breadth):
+...      print("area of square")
+...      print(area_of_square)
+... else:
+...      print("area of rectangle")
+...      print(area_of_rectangle)
+...
+area of rectangle
+2000.0
+
+
+Qstn NO.3:  a=int(input("age of a"))
+age of a 40
+>>> b=int(input("age of b"))
+age of b 98
+>>> c=int(input("age of c"))
+age of c 18
+>>> if ((a>=b) & (a>c)):
+...    print("oldest is a")
+... elif((b>=a) & (b>=c)):
+...     print("oldest is b")
+... elif((c>=a) & (c>=b)):
+...     print("oldest is c")
+... else:
+...     print("youngest")
+...
+oldest is b
+
+>>>
+>>>
+>>>Qstn No.4: points=int(input("enter the points upto 200 :"))
+enter the points upto 200 :187
+>>> if(points in range (1,50)):
+...      print("sorry! no prize")
+... elif(points in range (51,150)):
+...   print("congratulation! you win a wooden dog")
+... elif(points in range (151,180)):
+...   print("congratulation! you win a book")
+... elif(points in range (181,200)):
+...   print("congratulation! you win chocolates")
+... else:
+...   print("invalid input!")
+...
+congratulation! you win chocolates
+>>>
+>>>
+>>>Qstn No.5:  quantity=int(input("enter quatity of items "))
+enter quatity of items 1050
+>>> if(quantity*100>1000):
+...     print("total cost :",((quantity*100)-(.1*quantity*100)))
+... else:
+...     print("total cost :",(quantity*100))
+...
+total cost : 94500.0
+>>>
