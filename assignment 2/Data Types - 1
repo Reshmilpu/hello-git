@@ -39,3 +39,20 @@ deque(['shiv', 'sush', 'prince'])
 >>> print(queue)
 deque(['sush', 'prince'])
 >>> student.append(q)
+
+ > l=[20,45,67,35,80,46]
+>>> l
+[20, 45, 67, 35, 80, 46]
+>>> for i in l:
+...    if (i % 2) ==0:
+...       print(i, "is even")
+...    else:
+...       print(i, "is odd")
+...
+20 is even
+45 is odd
+67 is odd
+35 is odd
+80 is even
+46 is even
+
