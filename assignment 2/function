@@ -1,0 +1,60 @@
+#1.create a function to calculate the area of a circle by taking input from user
+
+radius=float(input("radius of circle is"))  #taking input from user of radius
+def area(radius):  #create function to create area
+   area_circle=3.14*radius*radius #calculate area of circle
+   return area_circle #return area of circle
+final_area=area(radius)
+print("area of circle is ",final_area) #print area of circle
+
+
+#2.Write a function “perfect()” that determines if parameter number is a perfect
+#number. Use this function in a program that determines and prints all the
+#perfect numbers between 1 and 1000. 
+
+def perfect(n):#create a function to create a perfect number
+  sum = 0  
+  for i in range(1,n):
+    if n%i == 0:  #check condition
+      sum = sum + i #increment sum
+  if sum == n: #if sum is equal to n
+    return True #then return true
+  else:
+    return False #oterwise print false
+for i in range(1,1001): #range of number
+  if perfect(i):
+    print (i) #print perfect number
+
+#3.Print multiplication table of 12 using recursion.
+
+def mul_table(n, i=1): #create function to find table of 12
+    print (n*i) #print n*i
+    if i != 10:
+        mul_table(n,i+1)
+mul_table(12) #multiplication table of 12
+
+#4. Write a function to calculate power of a number raised to other
+#     ( a^b ) using recursion.
+
+def power(a,b):  #create function to find power of any number
+    if b == 1:
+        return a
+    else:
+        return a * power(a,b-1)
+      
+print (power(5,3)) #print power of 5 
+
+#5. Write a function to find factorial of a number but also store the factorials
+#      calculated in a dictionary
+
+num = int(input("Enter the number"))#taking input from the user
+def factorial(n): #create function to find factorial
+   if n == 1:
+       return n
+   else:
+       return n*factorial(n - 1) #return factorial
+fact = factorial(num) #calculate factorial
+print(fact)#print factorial
+dictionary={ num:fact}#create dictionary
+print(dictionary)#print factorial in dictionary
+	
