@@ -1,0 +1,124 @@
+#1.Create a circle class and initialize it with radius. Make two methods
+#   getArea and getCircumference inside this class.
+
+
+class Circle():  #construct a circle object
+    def __init__(self, r):  #initialize
+        self.radius = r  #create data field
+
+    def getarea(self):  #getarea()method
+        return self.radius**2*3.14
+    
+    def getcircumference(self):  #getcircumference method
+        return 2*self.radius*3.14
+
+NewCircle = Circle(5)
+print(NewCircle.getarea())#print area
+print(NewCircle.getcircumference())#print circumference
+
+
+#2.Create a Student class and initialize it with name and roll number.Make
+#  methods to :1. Display - It should display all informations
+
+class Student:  #construct a student object
+   def __init__ (self,name,rollno): #initialize
+      self.name=name #create data field
+      self.rollno=rollno
+   def display(self): #display
+      print(self.name)#print name
+      print(self.rollno)#print roll
+   def setAge(self,age):#create setAge()method
+      self.age=age
+      print(age)
+   def setMarks(self,marks):#create setMarks() method
+      self.marks=marks
+      print(marks)
+   
+
+name=input("enter name:")#take input from user name
+roll=input("enter roll")#roll
+age=input("enter age")#age
+marks=input("enter marks")#marks
+s=Student(name,roll)
+s.display()#call
+s.setAge(age)
+s.setMarks(marks)
+
+#3.Create a Temprature class. Make two methods :
+#1. convertFahrenheit - It will take celsius and will print it into Fahrenheit.
+#2. convertCelsius - It will take Fahrenheit and will convert it into Celsius.
+
+
+class Temperature():#create a Temperature object
+   def convertFahrenheit(self,celsius): #create convertFarhenheit()method
+      return(celsius*9/5)+32
+   def convertCelsius(self,fahrenheit):#create convertCelsius()method
+      return(fahrenheit-32)*5/9
+temperature=Temperature()#create object
+c=temperature.convertFahrenheit(100)#call 
+f=temperature.convertCelsius(98.4)
+print(c)#print celsius
+print(f)#print fahrenheit
+
+#4.Create a class MovieDetails and initialize it with Movie name, artistname,Year of release and ratings .
+#Make methods to 
+#1. Display-Display the details.
+#2. Update- Update the movie details.
+class MovieDetails:#create MovieDetails object
+   def __init__(self,name,artist,year,ratings):#initialize
+      self.name=name #create data field
+      self.artist=artist
+      self.year=year
+      self.ratings=ratings
+   def display(self): #display information
+      print(self.name) #print name
+      print(self.artist)#print artist
+      print(self.year)#print year
+      print(self.ratings)#print ratings
+   def update(self): #update information
+      name=input("enter name of movie")
+      self.name=name
+      print(name)
+      artist=input("enter artist name of movie")
+      self.artist=artist
+      print(artist)
+      year=input("enter year of movie release")
+      self.year=year
+      print(year)
+      ratings=input("enter rating")
+      self.ratings=ratings
+      print(ratings)
+
+movie=MovieDetails('Race','Salman khan',2018,4.5)
+movie.display()#call display method
+movie.update()#call update method
+
+
+#5.Create a class Expenditure and initialize it with expenditure,savings
+#.Make the following methods. 
+#1. Display expenditure and savings 
+#2. Calculate total salary
+#3. Display salary
+
+class Expenditure():#create Expenditure object
+   def __init__(self,expenditure,savings):#initialize
+      self.expenditure=expenditure#create data field
+      self.savings=savings
+   def display(self):#display expenditure and savings
+      print(self.expenditure)
+      print(self.savings)
+   def calculate_salary(self):#create calculate_salary method
+      total_salary=self.expenditure+self.savings
+      print("total salary",total_salary)
+
+expenditure=input("enter expenditure")#take input from user
+savings=input("enter savings")
+e=Expenditure(expenditure,savings)
+e.display()#call display method
+e.calculate_salary()#call calculate_salary method
+
+
+
+
+
+
