@@ -1,0 +1,79 @@
+#.what is time tuple
+
+# time() is used to count the number of seconds
+#gmtime(sec) is a function returns a structure with 9 values each representing
+# a time attribute in sequence.
+
+#Index     Attribute   Values
+#0          tm_year     2018
+#1          tm_month    1 to 12
+#2        tm_monthday   1 to 30or31
+#3          tm_hour     1 to 24
+#4          tm_min      1 to 60
+#5          tm_sec      1 to 60
+#6        tm_weekday    1 to 7
+#7        tm_yearday    1 to 365or366
+#8        tm_DST         -1,0,1
+
+
+
+
+#2.write a program to get formatted time
+
+import time
+formattedtime = time.asctime(time.localtime(time.time()))#get formatted time
+print("formatted time is:",formattedtime)#print formatted time
+
+
+#3.Extract month from the time.
+
+import datetime
+d = datetime.date.today()
+print(d.month)#print month
+
+#4.Extract day from the time.
+
+import datetime
+d = datetime.date.today()
+print(d.day) #print day
+
+
+#5.Extract date(ex:11 in 11/01/2021)from the time.
+
+import datetime
+a="2021-01-11"
+d=datetime.datetime.strptime(a,"%Y-%m-%d")
+print(d.day)#print date
+
+#6.write a program to print time using localtime method.
+
+import time
+print("local time is",time.localtime())#print localtime
+
+#7.Find the factorial of a number input by user using math package functions.
+
+import math
+number = eval(input("enter number"))#take input from user
+print("factorial is",end=" ")#print factorial
+print(math.factorial(number))
+
+
+#8.Find the GCD of a number input by user using math package function.
+
+import math
+number1=eval(input("enter first number"))#take first input from user
+number2=eval(input("enter second number"))#take second input from user
+print(math.gcd(number,number2))#print gcd
+
+#9.Use os package
+#1.Get current working directory
+
+import os
+print(os.getcwd())
+
+#Get the user environment
+ 
+import os
+os.environ
+
+
