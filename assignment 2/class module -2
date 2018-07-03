@@ -1,0 +1,121 @@
+#.Q1.Create a class Animal as a base class and define method animal_attribute.
+#Create another class Tiger which is inheriting Animal and access the base
+#class method.
+
+class Animal:
+   def animal_attribute(self):
+      print("have legs: four")
+
+class Tiger(Animal):
+   def __init__(self):
+      print("I m a tiger")
+      self.types = "wild"
+      self.lives_in_jungle = True
+
+   def specification(self):
+      print("tiger is national animal of India")
+
+t = Tiger()
+t.animal_attribute()
+t.specification()
+
+
+#Q.2- What will be the output of following code.
+
+class A:
+    def f(self):
+        return self.g()
+
+    def g(self):
+        return 'A'
+
+class B(A):
+    def g(self):
+        return 'B'
+
+a = A()
+b = B()
+print (a.f(), b.f())
+
+
+#=>output: AB
+
+#Q.3- Create a class Cop. Initialize its name, age , work experience and
+#designation. Define methods to add, display and update the following details.
+#Create another class Mission which extends the class Cop. Define method
+#add_mission _details. Select an object of Cop and access methods of
+#base class to get information for a particular cop and make it available
+#for mission.
+
+
+class Cop:
+   def __init(self,name="abc",age=35,work_experience=10,designation="delhi"):
+      self.name=name
+      self.age=age
+      self.work_experience= work_experience
+      self.designation=designation
+   def add__mission__details(self):
+      print("name is abc")
+      print("age is 35")
+      print("experience of work is 10")
+      print("designation is delhi")
+class Mission(Cop):
+   def __init(self):
+      self.name="xyz"
+      self.age=45
+      self.work_experience= 15
+      self.designation=patna
+      
+   def mission__attr(self):
+       print("name is: xyz")
+       print("age is 45")
+       print("work experience is: 15")
+       print("designation is patna")
+       
+      
+
+m = Mission()
+m.add__mission__details()
+m.mission__attr()
+
+
+#Q.4.Create a class Shape.Initialize it with length and breadth Create the method Area.
+#Create class rectangle and square which inherits shape and access the method Area.      
+
+import math
+
+class Shape(object):
+   def area(self):
+      print("area of shape")
+
+class Rectangle(Shape):
+   def __init__(self,length,breadth):
+      self.length=length
+      self.breadth=breadth
+
+   def area(self):
+      return self.length * self.breadth
+
+class Square(Shape):
+   def __init__(self,side):
+      self.side = side
+
+   def area(self):
+      return self.side*self.side
+
+def main():
+
+   rect = Rectangle(5,4)
+   print("Rectangle(5,4)")
+   print("area: " +str(rect.area()))
+
+   square = Square(5)
+   print("Square(5)")
+   print(" area :" +  str(square.area()))
+
+
+
+if __name__== '__main__':
+   main()
+   
+
