@@ -1,0 +1,34 @@
+#Q.1 Create a dict with name and mobile number.Define a GUI interface using
+#tkinter and pack the label and create a scrollbar to scroll the list of keys
+#in the dictionary.
+#Q2. In the same tkinter file as created above, create a function to insert
+#items into the dictionary.
+
+from tkinter import *
+root = Tk()
+d = {"rash":11,"shalini":22,"shivani":33}
+
+mylist1 = Label(root,text="my name is:")
+mylist1.pack(side="bottom")
+mylist2 = Label(root,text="my phone number is:")
+mylist2.pack(side="top")
+
+def handleList(event):
+    label = lst.get(ACTIVE)
+    print(label)
+    phone = d.get(label)
+    global mylist1,mylist2
+    mylist1.config(text=label)
+    mylist2.config(text=phone)
+
+lst = Listbox(root)
+scroll = Scrollbar(root)
+scroll.pack( side = RIGHT, fill=Y)
+scroll.config(command=lst.yview)
+lst.config(yscrollcommand=scroll.set)
+scroll.pack(side=RIGHT ,fill=Y)
+lst.pack(side=LEFT, expand=YES, fill= BOTH)
+
+for k,v in d.items():
+    lst.insert('end',k)
+mainloop()
