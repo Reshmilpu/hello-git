@@ -1,0 +1,61 @@
+#Q.1Write a python program using tkinter interfaceto write Hello World
+#and a exit button that closes the interface.
+
+from tkinter import *
+import sys
+root = Tk()
+root.title("Hello World")
+w = Label(None)
+w.config(text="First tkinter....")
+w.pack()
+b = Button(None,text="Exit",command=sys.exit)
+b.pack()
+#mainloop()
+
+#Q2. Write a python program to in the same interface as above and
+#create a action when the button is click it will display some text.
+
+from tkinter import *
+def func():
+    print("Button clicked...")
+widget = Button(None,text="Hello GUI World",command=func)
+widget.pack(side=BOTTOM,expand = YES,fill=Y)
+#widget.mainloop()
+
+#Q3. Create a frame using tkinter with any label text and two buttons.
+#One to exit and other to change the label to some other text.
+
+from tkinter import *
+import sys
+root = Tk()
+fr = Frame()
+fr.pack()
+lbl = Label(fr,text="This is sample text")
+lbl.pack(side=TOP)
+def display():
+    global lbl
+    lbl.config(text="Text Changed...")
+btn1 = Button(fr,text="Change Text",command=display)
+btn1.pack(side=LEFT,expand=YES,fill=Y)
+btn2 = Button(fr,text="Quit",command=sys.exit)
+btn2.pack(side=RIGHT,expand=YES,fill=Y)
+btn2.mainloop()
+
+#Q.4 Write a python program using tkinter interface to take an input in the GUI
+#program and print it.
+
+from tkinter import *
+fr = Frame()
+fr.pack()
+ent = Entry(fr)
+ent.pack(side=TOP)
+ent.insert(0,"type here...")
+
+#ent.config(state='disabled')
+ent.focus()
+
+def display():
+    print("This is the input:",ent.get())
+widget = Button(fr,text="Hello GUI World",command=display)
+widget.pack(side=LEFT,expand=YES,fill=Y)
+widget.mainloop()
